@@ -1,0 +1,34 @@
+//
+// @author : tac
+// @date : 2017/3/22
+
+
+extends ../_shared
+block content
+    button(id="btn1", class="btn btn-sm btn-success") click me
+    button(id="btn2", class="btn btn-sm btn-info") click me
+    script.
+        $(function () {
+            $.getJSON("data/tree.json", function (result) {
+                $("#btn1").itemSelector({
+                    width: "800px",
+                    height: "500px",
+                    data: result,
+                    onShow: function (api, modal) {
+                        //todo::
+                        if (api) {
+                        }
+                    },
+                    afterClose: function (api, modal) {
+                        console.log("close modal");
+                    },
+                    onSubmit: function (api, data) {
+                        console.log(data);
+                        return true;
+                    }
+                });
+                $("#btn2").itemSelector({
+                    data: result,
+                });
+            });
+        })

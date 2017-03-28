@@ -5,8 +5,6 @@ var gutil = require("gulp-util");
 gulp.task("static", function() {
     gulp.src("src/css/**/*.css")
         .pipe(gulp.dest("dist/css"));
-    gulp.src("src/data/**")
-        .pipe(gulp.dest("dist/data"));
 });
 //*****************************************************************//
 var jade = require("gulp-jade");

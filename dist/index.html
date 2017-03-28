@@ -1,11 +1,10 @@
-<!----><!-- @author : tac--><!-- @date : 2017/3/22--><!DOCTYPE HTML><html lang="en"><head><meta charset="UTF-8"><title>index</title><script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script><script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script><script src="http://cdn.bootcss.com/jstree/3.3.3/jstree.min.js"></script><script src="js/jquery.item-selector.min.js"></script><link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css"><link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="css/bootstrap-theme/lumen.css"><link rel="stylesheet" href="http://cdn.bootcss.com/jstree/3.3.3/themes/default/style.min.css"></head><body><script>$(function () {
-    alert("hello");
-})</script></body><div class="container"><button id="btn1" class="btn btn-sm btn-success">click me</button><button id="btn2" class="btn btn-sm btn-info">click me</button><script>$(function () {
+<!----><!-- @author : tac--><!-- @date : 2017/3/22--><!DOCTYPE HTML><html lang="en"><head><meta charset="UTF-8"><title>index</title><script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.js"></script><script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script><script src="http://cdn.bootcss.com/jstree/3.3.3/jstree.min.js"></script><script src="js/jquery.item-selector.min.js"></script><link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css"><link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"><link rel="stylesheet" href="css/bootstrap-theme/lumen.css"><link rel="stylesheet" href="http://cdn.bootcss.com/jstree/3.3.3/themes/default/style.min.css"></head><body></body><div class="container"><button id="btn1" class="btn btn-sm btn-success">click me</button><button id="btn2" class="btn btn-sm btn-info">click me</button><script>$(function () {
     $.getJSON("data/tree.json", function (result) {
         $("#btn1").itemSelector({
             width: "800px",
             height: "500px",
             data: result,
+            icon: "fa fa-tag",
             onShow: function (api, modal) {
                 //todo::
                 if (api) {

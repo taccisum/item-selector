@@ -1,6 +1,20 @@
 (function () {
     itemSelector.define("DEF_CONFIG", function () {
         return {
+
+            /**
+             * todo::未完成
+             * [Boolean]是否使用单例
+             * 为true时所有实例将使用同一个模态框，可以避免页面上存在过多的实例
+             */
+            singleton: false,
+
+            /**
+             * [Boolean]是否开启懒加载
+             * 为true时模态框将在第一次触发绑定元素的点击事件时才被渲染
+             */
+            lazyLoad: true,
+
             /**
              * [Object]将存储为data-modal-id属性，为null则使用计数器生成一个id
              */
@@ -21,6 +35,10 @@
              * [Array]树数据，必需属性：id, pid, text, isExist
              */
             data: [],
+            /**
+             * [String]当数据的icon为null时显示的默认图标
+             */
+            icon: "fa fa-star",
             /**
              * [fn]模态框展示前触发
              * @param api todo::

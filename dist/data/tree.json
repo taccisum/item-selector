@@ -3,7 +3,7 @@
   {"id": "acrm", "pid": null, "text": "ACRM系统", "icon": "fa fa-cloud", "isSelected": false},
   {"id": "scm", "pid": null, "text": "进销存系统", "icon": "fa fa-cloud", "isSelected": true},
   {"id": "pms", "pid": null, "text": "PMS系统", "icon": "fa fa-cloud", "isSelected": true},
-  {"id": "ocrm", "pid": null, "text": "OCRM系统", "icon": "fa fa-cloud", "isSelected": true},
+  {"id": "ocrm", "pid": null, "text": "OCRM系统", "icon": null, "isSelected": true},
 
   {"id": "ssy_product", "pid": "ssy", "text": "商品管理", "icon": "fa fa-cog", "isSelected": false},
   {"id": "ssy_product_add", "pid": "ssy_product", "text": "添加商品", "icon": "fa fa-plus", "isSelected": false},

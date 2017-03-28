@@ -128,7 +128,7 @@
                     var pluginOpts = {
                         types : {
                             "default" : {
-                                icon : "fa fa-star"
+                                icon : options.icon
                             },
                         },
                         checkbox : {
@@ -352,11 +352,26 @@
         }
         
         return function (options) {
-            var _opts = $.extend({}, DEF_CONFIG, options, true);
-            var modalId = render(_opts);
+            function load() {
+                var modalId = render(_opts);
 
-            this.attr("data-toggle", "modal");
-            this.attr("data-target", "[data-modal-id=" + modalId + "]");
+                $(this).attr("data-toggle", "modal");
+                $(this).attr("data-target", "[data-modal-id=" + modalId + "]");
+                isLoad = true;
+            }
+
+            var _opts = $.extend({}, DEF_CONFIG, options, true);
+
+            if(_opts.lazyLoad){
+                var isLoad = false;
+                this.on("click", function () {
+                    if(!isLoad){
+                        load.call(this);
+                    }
+                });
+            }else{
+                load.call(this);
+            }
         }
     });
 })();
